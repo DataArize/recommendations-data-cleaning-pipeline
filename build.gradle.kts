@@ -10,7 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.beam:beam-runners-direct-java:2.60.0")
+    implementation("org.slf4j:slf4j-api:2.1.0-alpha1")
+    implementation("org.slf4j:slf4j-log4j12:2.1.0-alpha1")
     implementation("org.apache.beam:beam-sdks-java-io-google-cloud-platform:2.60.0")
     implementation("org.apache.beam:beam-runners-google-cloud-dataflow-java:2.60.0")
     implementation("org.apache.beam:beam-sdks-java-core:2.60.0")
@@ -20,6 +21,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+
 tasks.test {
     useJUnitPlatform()
 }
+
